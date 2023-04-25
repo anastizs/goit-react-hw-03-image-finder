@@ -1,10 +1,14 @@
-import { GalleryItem, GalleryImg } from "./ImageGalleryItem.styled";
+import css from "./ImageGalleryItem.module.css";
 
-const ImageGalleryItem = () => {
+const ImageGalleryItem = ({ id, webformatURL, tags }) => {
   return (
-    <GalleryItem>
-      <GalleryImg src="" alt="" />
-    </GalleryItem>
+    <li className={css.ImageGalleryItem} key={id}>
+      <img
+        src={webformatURL}
+        alt={tags}
+        className={css["ImageGalleryItem-image"]}
+      />
+    </li>
   );
 };
 
