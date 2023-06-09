@@ -3,12 +3,13 @@ import { createPortal } from 'react-dom';
 import { Component } from 'react';
 import css from './Modal.module.css';
 
+
 export class Modal extends Component {
-    static propTypes = {
-        descr: PropTypes.string.isRequired,
-        link: PropTypes.string.isRequired,
-        onClose: PropTypes.func.isRequired,
-    };
+    // static propTypes = {
+    //     descr: PropTypes.string.isRequired,
+    //     link: PropTypes.string.isRequired,
+    //     onClose: PropTypes.func.isRequired,
+    // };
 
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeydown);
